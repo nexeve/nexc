@@ -1,0 +1,80 @@
+.module-timer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Clean gap strictly between the ring boundary and the controls */
+  color: rgba(255, 255, 255, 0.95);
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-core {
+  display: grid;
+  place-items: center;
+}
+
+.timer-ring-container {
+  grid-area: 1 / 1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-display {
+  grid-area: 1 / 1;
+  position: relative;
+  z-index: 1;
+  font-size: clamp(3rem, min(8cqw, 12cqh), 7rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+  -webkit-app-region: no-drag;
+}
+
+.module-timer:hover .timer-controls,
+.timer-controls:focus-within {
+  opacity: 1;
+}
+
+.timer-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  outline: none;
+  -webkit-app-region: no-drag;
+}
+
+.timer-btn:hover, .timer-btn:focus-visible {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.timer-state-completed .timer-display {
+  color: var(--accent-color);
+  animation: timer-pulse 2s infinite ease-in-out;
+}
+
+@keyframes timer-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

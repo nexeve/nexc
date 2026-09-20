@@ -1,0 +1,24 @@
+.module-date {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.date-weekday {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.date-separator {
+  margin: 0 0.5rem;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+.date-month-day {
+  font-weight: 300;
+}
