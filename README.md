@@ -1,6 +1,6 @@
-# Nex's Clock
+# nexc
 
-Nex's Clock is a translucent, highly customizable desktop clock application designed to blend seamlessly with the environment through a modular, profile-driven architecture.
+nexc is a translucent, highly customizable desktop clock application designed to blend seamlessly with the environment through a modular, profile-driven architecture.
 
 ## Tech Stack
 
